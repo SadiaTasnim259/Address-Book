@@ -14,7 +14,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        tableView.delegate = self
+       // tableView.dataSource = self
     }
 
 
@@ -25,6 +26,20 @@ class ViewController: UIViewController {
                 self.navigationController?.pushViewController(registerViewController, animated: true)
     }
 
+}
+
+//extension ViewController: UITableViewDataSource{
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//
+//    }
+//}
+
+extension ViewController: UITableViewDelegate{
+    
 }
 
 

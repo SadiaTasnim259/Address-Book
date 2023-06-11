@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class RegisterViewController: UIViewController {
     
@@ -41,6 +42,19 @@ class RegisterViewController: UIViewController {
             openAlert(title: "Alert", message: "Please enter your password")
             return
         }
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let userEntity = UserEntity(context: context)
+        userEntity.firstName = firstName
+        userEntity.lastName = lastName
+        userEntity.phoneNumber = phoneNumber
+        userEntity.password = password
+        
+        do{
+            try context.save()
+        }catch{
+            print("User saving error:", error)
+        }
     }
     
     func openAlert(title: String, message: String) -> Void {
@@ -52,5 +66,4 @@ class RegisterViewController: UIViewController {
            
             self.present(alert, animated: true)
         }
-
 }
