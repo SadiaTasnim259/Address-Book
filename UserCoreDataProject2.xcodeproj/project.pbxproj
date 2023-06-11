@@ -17,6 +17,7 @@
 		047E8A402A32089700436147 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047E8A3E2A32089700436147 /* LaunchScreen.storyboard */; };
 		047E8A492A3208E800436147 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E8A472A3208E800436147 /* UserCell.swift */; };
 		047E8A4A2A3208E800436147 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047E8A482A3208E800436147 /* UserCell.xib */; };
+		04E400E82A35B5A50098BD77 /* CornerRediusExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E400E72A35B5A50098BD77 /* CornerRediusExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		047E8A412A32089700436147 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		047E8A472A3208E800436147 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		047E8A482A3208E800436147 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		04E400E72A35B5A50098BD77 /* CornerRediusExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRediusExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				047E8A322A32089500436147 /* SceneDelegate.swift */,
 				047E8A342A32089500436147 /* ViewController.swift */,
 				047E8A472A3208E800436147 /* UserCell.swift */,
+				04E400E72A35B5A50098BD77 /* CornerRediusExtension.swift */,
 				047E8A482A3208E800436147 /* UserCell.xib */,
 				047E8A362A32089500436147 /* Main.storyboard */,
 				047700622A359B140032B053 /* RegisterViewController.swift */,
@@ -155,6 +158,7 @@
 				047E8A352A32089500436147 /* ViewController.swift in Sources */,
 				047E8A312A32089500436147 /* AppDelegate.swift in Sources */,
 				047700632A359B140032B053 /* RegisterViewController.swift in Sources */,
+				04E400E82A35B5A50098BD77 /* CornerRediusExtension.swift in Sources */,
 				047E8A492A3208E800436147 /* UserCell.swift in Sources */,
 				047E8A332A32089500436147 /* SceneDelegate.swift in Sources */,
 			);
