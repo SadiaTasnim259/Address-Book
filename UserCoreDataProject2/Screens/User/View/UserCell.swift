@@ -13,9 +13,16 @@ class UserCell: UITableViewCell {
     @IBOutlet weak var fullNameLabel: UILabel!
     @IBOutlet weak var phoneNumberLabel: UILabel!
     
+    var user: UserEntity?{
+        didSet{ // property observer
+            userConfiguration()
+        }
+    }
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        profileImageView.layer.cornerRadius = profileImageView.frame.size.height / 2
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -24,4 +31,11 @@ class UserCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func userConfiguration(){
+        guard let user else{ return }
+        
+        fullNameLabel.text = (user.firstName ?? "") + " " + (user.lastName ?? "")
+        phoneNumberLabel.text = "Phone: \(user.phoneNumber ?? "")"
+        
+    }
 }

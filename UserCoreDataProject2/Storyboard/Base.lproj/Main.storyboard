@@ -17,12 +17,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kg5-zo-KI1">
-                                <rect key="frame" x="0.0" y="145" width="393" height="673"/>
+                                <rect key="frame" x="0.0" y="159" width="393" height="659"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j5L-Ar-0r9">
-                                <rect key="frame" x="-1" y="103" width="393" height="56"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j5L-Ar-0r9">
+                                <rect key="frame" x="0.0" y="103" width="393" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <scopeButtonTitles>
                                     <string>Title</string>
@@ -36,10 +35,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="kg5-zo-KI1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="42" id="GlE-xH-X2y"/>
+                            <constraint firstItem="kg5-zo-KI1" firstAttribute="top" secondItem="j5L-Ar-0r9" secondAttribute="bottom" id="0Mo-QI-TXn"/>
+                            <constraint firstItem="j5L-Ar-0r9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AT9-01-bo6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kg5-zo-KI1" secondAttribute="bottom" id="Vkx-Ta-eSn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kg5-zo-KI1" secondAttribute="trailing" id="hRQ-Ub-GRE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j5L-Ar-0r9" secondAttribute="trailing" id="kyZ-FM-Vtc"/>
                             <constraint firstItem="kg5-zo-KI1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mrC-A0-Vyp"/>
+                            <constraint firstItem="j5L-Ar-0r9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zFE-7d-UAi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Users" id="Sag-jw-8gU">
@@ -131,10 +133,19 @@
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dpe-5d-Ld2">
                                 <rect key="frame" x="85" y="140" width="215" height="148.66666666666669"/>
                                 <color key="tintColor" systemColor="labelColor"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="215" id="df9-GZ-zKG"/>
                                     <constraint firstAttribute="height" constant="150" id="qNY-Jk-kyq"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="zBN-fI-MHb" appends="YES" id="zE1-2h-mHs"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LoO-AJ-TPS"/>
@@ -155,9 +166,15 @@
                         <outlet property="lastNameField" destination="9Nq-fE-ecQ" id="DWC-X5-Vpc"/>
                         <outlet property="passwordField" destination="YUI-Zr-Hef" id="PZK-QR-2FQ"/>
                         <outlet property="phoneNumberField" destination="Lqh-VG-b1k" id="Z0e-ov-apg"/>
+                        <outlet property="profileImageView" destination="dpe-5d-Ld2" id="oSJ-jK-ekL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0T3-HT-JVh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="zBN-fI-MHb">
+                    <connections>
+                        <action selector="selectImage:" destination="l8j-DD-adW" id="PaV-q5-Uln"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1704.5801526717557" y="-27.464788732394368"/>
         </scene>

@@ -18,6 +18,8 @@
 		047E8A492A3208E800436147 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E8A472A3208E800436147 /* UserCell.swift */; };
 		047E8A4A2A3208E800436147 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047E8A482A3208E800436147 /* UserCell.xib */; };
 		04E400E82A35B5A50098BD77 /* CornerRediusExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E400E72A35B5A50098BD77 /* CornerRediusExtension.swift */; };
+		04E400EA2A35ED6D0098BD77 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E400E92A35ED6D0098BD77 /* DatabaseManager.swift */; };
+		04E400F82A360CF50098BD77 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E400F72A360CF50098BD77 /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		047E8A472A3208E800436147 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		047E8A482A3208E800436147 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 		04E400E72A35B5A50098BD77 /* CornerRediusExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRediusExtension.swift; sourceTree = "<group>"; };
+		04E400E92A35ED6D0098BD77 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		04E400F72A360CF50098BD77 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,20 +70,102 @@
 		047E8A2F2A32089500436147 /* UserCoreDataProject2 */ = {
 			isa = PBXGroup;
 			children = (
-				047E8A302A32089500436147 /* AppDelegate.swift */,
-				047E8A322A32089500436147 /* SceneDelegate.swift */,
-				047E8A342A32089500436147 /* ViewController.swift */,
-				047E8A472A3208E800436147 /* UserCell.swift */,
-				04E400E72A35B5A50098BD77 /* CornerRediusExtension.swift */,
-				047E8A482A3208E800436147 /* UserCell.xib */,
-				047E8A362A32089500436147 /* Main.storyboard */,
-				047700622A359B140032B053 /* RegisterViewController.swift */,
-				047E8A3C2A32089700436147 /* Assets.xcassets */,
-				047E8A3E2A32089700436147 /* LaunchScreen.storyboard */,
+				04E400F12A36091C0098BD77 /* Extensions */,
+				04E400EB2A3608180098BD77 /* Applications */,
+				04E400F02A36086B0098BD77 /* Database */,
+				04E400EF2A36085C0098BD77 /* Screens */,
+				04E400EE2A36084B0098BD77 /* Storyboard */,
+				04E400ED2A3608350098BD77 /* Resources */,
 				047E8A412A32089700436147 /* Info.plist */,
-				047E8A392A32089500436147 /* UserCoreDataProject2.xcdatamodeld */,
 			);
 			path = UserCoreDataProject2;
+			sourceTree = "<group>";
+		};
+		04E400EB2A3608180098BD77 /* Applications */ = {
+			isa = PBXGroup;
+			children = (
+				047E8A322A32089500436147 /* SceneDelegate.swift */,
+				047E8A302A32089500436147 /* AppDelegate.swift */,
+			);
+			path = Applications;
+			sourceTree = "<group>";
+		};
+		04E400ED2A3608350098BD77 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				047E8A3C2A32089700436147 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		04E400EE2A36084B0098BD77 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				047E8A362A32089500436147 /* Main.storyboard */,
+				047E8A3E2A32089700436147 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		04E400EF2A36085C0098BD77 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				04E400F62A360CC60098BD77 /* User */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		04E400F02A36086B0098BD77 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				04E400E92A35ED6D0098BD77 /* DatabaseManager.swift */,
+				047E8A392A32089500436147 /* UserCoreDataProject2.xcdatamodeld */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		04E400F12A36091C0098BD77 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				04E400E72A35B5A50098BD77 /* CornerRediusExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		04E400F22A360C850098BD77 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04E400F72A360CF50098BD77 /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04E400F52A360CAB0098BD77 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				047E8A342A32089500436147 /* ViewController.swift */,
+				047700622A359B140032B053 /* RegisterViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04E400F62A360CC60098BD77 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				04E400F22A360C850098BD77 /* Model */,
+				04E400F92A3613C80098BD77 /* View */,
+				04E400F52A360CAB0098BD77 /* Controller */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		04E400F92A3613C80098BD77 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				047E8A472A3208E800436147 /* UserCell.swift */,
+				047E8A482A3208E800436147 /* UserCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,12 +240,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E400EA2A35ED6D0098BD77 /* DatabaseManager.swift in Sources */,
 				047E8A3B2A32089500436147 /* UserCoreDataProject2.xcdatamodeld in Sources */,
 				047E8A352A32089500436147 /* ViewController.swift in Sources */,
 				047E8A312A32089500436147 /* AppDelegate.swift in Sources */,
 				047700632A359B140032B053 /* RegisterViewController.swift in Sources */,
 				04E400E82A35B5A50098BD77 /* CornerRediusExtension.swift in Sources */,
 				047E8A492A3208E800436147 /* UserCell.swift in Sources */,
+				04E400F82A360CF50098BD77 /* UserModel.swift in Sources */,
 				047E8A332A32089500436147 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
