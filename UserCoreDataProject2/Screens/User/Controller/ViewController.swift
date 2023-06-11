@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        users = databaseManager.fetchUser()
+        users = databaseManager.fetchUserAllUser()
         tableView.reloadData()
     }
 
@@ -63,19 +63,19 @@ extension ViewController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.text = ""
         
-        users = databaseManager.fetchUser()
+        users = databaseManager.fetchUserAllUser()
         
         searchBar.endEditing(true)
-        tableView.reloadData()
+        tableView.reloadData() ///sob data dekhabe
     }
     
     
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty{
-            users = databaseManager.fetchUser()
+            users = databaseManager.fetchUserAllUser()
         }else{
-            //users = databaseManager.fetchUser(keyword: searchText)
+            users = databaseManager.fetchSearchedUser(keyword: searchText)
         }
         
         tableView.reloadData()

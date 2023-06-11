@@ -31,7 +31,7 @@ class DatabaseManager{
         }
     }
     
-    func fetchUser()-> [UserEntity]{
+    func fetchUserAllUser()-> [UserEntity]{
         var users: [UserEntity] = []
         
         do{
@@ -42,5 +42,25 @@ class DatabaseManager{
          return users
     }
     
+    
+    
+    
+    func fetchSearchedUser(keyword: String) -> [UserEntity] {
+        var users: [UserEntity] = []
+        
+        let fetchRequest: NSFetchRequest<UserEntity> = UserEntity.fetchRequest()
+        
+        let predicate = NSPredicate(format: "firstName CONTAINS[c] %@ OR lastName CONTAINS[c] %@", keyword, keyword)
+        fetchRequest.predicate = predicate
+        
+        do {
+            users = try context.fetch(fetchRequest)
+        } catch {
+            print("Fetch user error: \(error.localizedDescription)")
+        }
+        
+        return users
+    }
+
       
 }
