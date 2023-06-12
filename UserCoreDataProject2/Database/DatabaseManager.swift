@@ -70,7 +70,22 @@ class DatabaseManager{
         do{
             try context.save()
         }catch{
-            print("User saving error:", error)
+            print("User saving error:\(error)")
+        }
+    }
+    
+    func deleteUser(userEntity: UserEntity){
+        let imageURL = URL.documentsDirectory.appending(components: userEntity.imageName ?? "").appendingPathExtension("png")
+        do{
+            try FileManager.default.removeItem(at: imageURL)
+        }catch{
+            print("Remove image from Document Directory error:\(error)")
+        }
+        context.delete(userEntity)
+        do{
+            try context.save()
+        }catch{
+            print("User saving error: \(error)")
         }
     }
 }

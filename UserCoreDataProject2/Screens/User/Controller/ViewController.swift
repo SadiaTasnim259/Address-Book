@@ -65,7 +65,13 @@ extension ViewController: UITableViewDelegate{
             self.addUpdateUserNavigation(user: self.users[indexPath.row] )// je user select hobe tar indexpath.row te je data asbe ta pass korbo ta registervc pabe
         }
         update.backgroundColor = .systemIndigo
-        return UISwipeActionsConfiguration(actions: [update])
+        
+        let delete = UIContextualAction(style: .destructive, title: "Delete") { _, _, _ in
+            self.databaseManager.deleteUser(userEntity: self.users[indexPath.row]) // coredata theke delete // age core data theke delete na korle problem ache
+            self.users.remove(at: indexPath.row) // Array // table view theke dlt
+            self.tableView.reloadData()
+        }
+        return UISwipeActionsConfiguration(actions: [delete,update ])
     }
 }
 
