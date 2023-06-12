@@ -23,6 +23,7 @@ class DatabaseManager{
         userEntity.lastName = user.lastName
         userEntity.phoneNumber = user.phoneNumber
         userEntity.password = user.password
+        userEntity.imageName = user.imageName
         
         do{
             try context.save()

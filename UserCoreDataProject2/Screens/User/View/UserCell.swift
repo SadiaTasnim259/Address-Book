@@ -37,5 +37,8 @@ class UserCell: UITableViewCell {
         fullNameLabel.text = (user.firstName ?? "") + " " + (user.lastName ?? "")
         phoneNumberLabel.text = "Phone: \(user.phoneNumber ?? "")"
         
+        //fetch image
+        let imageURL = URL.documentsDirectory.appending(components: user.imageName ?? "").appendingPathExtension("png")
+        profileImageView.image = UIImage(contentsOfFile: imageURL.path)
     }
 }

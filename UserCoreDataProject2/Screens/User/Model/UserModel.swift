@@ -12,4 +12,5 @@ struct UserModel{
     let lastName:String
     let phoneNumber:String
     let password:String
+    let imageName:String
 }

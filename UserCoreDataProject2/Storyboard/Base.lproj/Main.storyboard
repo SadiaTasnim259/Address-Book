@@ -70,7 +70,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="jJY-mH-0gB">
-                                <rect key="frame" x="31" y="346" width="330" height="263"/>
+                                <rect key="frame" x="32" y="371" width="330" height="263"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please Enter Your First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SdP-27-cOt">
                                         <rect key="frame" x="0.0" y="0.0" width="330" height="50"/>
@@ -111,10 +111,9 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xwy-rD-3fc">
-                                <rect key="frame" x="119" y="677" width="145" height="55"/>
+                                <rect key="frame" x="139.66666666666666" y="694" width="115" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="145" id="42m-Nt-9o5"/>
-                                    <constraint firstAttribute="height" constant="55" id="6IH-Ct-zxP"/>
+                                    <constraint firstAttribute="width" constant="115" id="Y9G-hq-q2S"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Register">
@@ -130,34 +129,30 @@
                                     <action selector="registerButtonTapped:" destination="l8j-DD-adW" eventType="touchUpInside" id="mc7-GY-eWM"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dpe-5d-Ld2">
-                                <rect key="frame" x="85" y="140" width="215" height="148.66666666666669"/>
-                                <color key="tintColor" systemColor="labelColor"/>
-                                <gestureRecognizers/>
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="H5w-Il-DCS">
+                                <rect key="frame" x="137" y="154" width="120" height="118.66666666666667"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="215" id="df9-GZ-zKG"/>
-                                    <constraint firstAttribute="height" constant="150" id="qNY-Jk-kyq"/>
+                                    <constraint firstAttribute="width" constant="120" id="6Sy-qO-BwK"/>
+                                    <constraint firstAttribute="height" constant="120" id="l2I-Hu-A6U"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
-                                        <real key="value" value="100"/>
+                                        <real key="value" value="60"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="zBN-fI-MHb" appends="YES" id="zE1-2h-mHs"/>
-                                </connections>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LoO-AJ-TPS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="dpe-5d-Ld2" firstAttribute="top" secondItem="LoO-AJ-TPS" secondAttribute="top" constant="36" id="C7z-dA-rqn"/>
-                            <constraint firstItem="jJY-mH-0gB" firstAttribute="top" secondItem="LoO-AJ-TPS" secondAttribute="top" constant="243" id="PCU-xj-skz"/>
-                            <constraint firstItem="dpe-5d-Ld2" firstAttribute="leading" secondItem="LoO-AJ-TPS" secondAttribute="leading" constant="85" id="SfT-g1-SFw"/>
-                            <constraint firstItem="Xwy-rD-3fc" firstAttribute="top" secondItem="jJY-mH-0gB" secondAttribute="bottom" constant="68" id="WBH-rF-jzH"/>
-                            <constraint firstItem="LoO-AJ-TPS" firstAttribute="trailing" secondItem="dpe-5d-Ld2" secondAttribute="trailing" constant="93" id="gi4-N1-dAY"/>
-                            <constraint firstItem="jJY-mH-0gB" firstAttribute="leading" secondItem="LoO-AJ-TPS" secondAttribute="leading" constant="31" id="ojX-bu-iHO"/>
-                            <constraint firstItem="Xwy-rD-3fc" firstAttribute="leading" secondItem="LoO-AJ-TPS" secondAttribute="leading" constant="119" id="zu9-Ju-L2v"/>
+                            <constraint firstItem="Xwy-rD-3fc" firstAttribute="centerX" secondItem="Dsb-lI-WD8" secondAttribute="centerX" id="9iz-kT-Q6s"/>
+                            <constraint firstItem="H5w-Il-DCS" firstAttribute="centerX" secondItem="Dsb-lI-WD8" secondAttribute="centerX" id="Bbm-53-hFH"/>
+                            <constraint firstItem="LoO-AJ-TPS" firstAttribute="trailing" secondItem="jJY-mH-0gB" secondAttribute="trailing" constant="32" id="G1A-ao-w6M"/>
+                            <constraint firstItem="H5w-Il-DCS" firstAttribute="top" secondItem="LoO-AJ-TPS" secondAttribute="top" constant="50" id="Q0d-Nb-nqD"/>
+                            <constraint firstItem="Xwy-rD-3fc" firstAttribute="top" secondItem="jJY-mH-0gB" secondAttribute="bottom" constant="60" id="fpe-RV-4mv"/>
+                            <constraint firstItem="jJY-mH-0gB" firstAttribute="leading" secondItem="LoO-AJ-TPS" secondAttribute="leading" constant="32" id="hg1-8Z-rMx"/>
+                            <constraint firstItem="LoO-AJ-TPS" firstAttribute="bottom" secondItem="Xwy-rD-3fc" secondAttribute="bottom" constant="80" id="t9w-wF-XUg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Z3d-ss-2o7"/>
@@ -166,15 +161,10 @@
                         <outlet property="lastNameField" destination="9Nq-fE-ecQ" id="DWC-X5-Vpc"/>
                         <outlet property="passwordField" destination="YUI-Zr-Hef" id="PZK-QR-2FQ"/>
                         <outlet property="phoneNumberField" destination="Lqh-VG-b1k" id="Z0e-ov-apg"/>
-                        <outlet property="profileImageView" destination="dpe-5d-Ld2" id="oSJ-jK-ekL"/>
+                        <outlet property="profileImageView" destination="H5w-Il-DCS" id="e2Z-li-eik"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0T3-HT-JVh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="zBN-fI-MHb">
-                    <connections>
-                        <action selector="selectImage:" destination="l8j-DD-adW" id="PaV-q5-Uln"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1704.5801526717557" y="-27.464788732394368"/>
         </scene>
@@ -199,9 +189,6 @@
     </scenes>
     <resources>
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
