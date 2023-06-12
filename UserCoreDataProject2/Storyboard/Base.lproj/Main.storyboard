@@ -162,6 +162,7 @@
                         <outlet property="passwordField" destination="YUI-Zr-Hef" id="PZK-QR-2FQ"/>
                         <outlet property="phoneNumberField" destination="Lqh-VG-b1k" id="Z0e-ov-apg"/>
                         <outlet property="profileImageView" destination="H5w-Il-DCS" id="e2Z-li-eik"/>
+                        <outlet property="registerButton" destination="Xwy-rD-3fc" id="VQX-jh-zcW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0T3-HT-JVh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

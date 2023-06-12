@@ -12,21 +12,23 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
 
     var databaseManager = DatabaseManager()
     var imageSelectedByUser:Bool = false
+    var existingUser: UserEntity?
 
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var firstNameField: UITextField!
     @IBOutlet weak var lastNameField: UITextField!
     @IBOutlet weak var phoneNumberField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-
+    @IBOutlet weak var registerButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        navigationItem.title = "Add User"
 
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(selectImage))
         profileImageView.addGestureRecognizer(tapGesture)
         //profileImageView.layer.cornerRadius = profileImageView.frame.size.height/2
+        
+        userDetailConfiguration()
     }
 
 
@@ -59,8 +61,8 @@ extension RegisterViewController{
 
         self.present(alert, animated: true)
     }
-    func showAlert() {
-        let alert = UIAlertController(title: nil, message: "User Added", preferredStyle: UIAlertController.Style.alert)
+    func showAlert(message: String) {
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: UIAlertController.Style.alert)
         let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { _ in
             self.navigationController?.popViewController(animated: true)
         }
@@ -101,14 +103,31 @@ extension RegisterViewController{
             openAlert(title: "Alert", message: "Please enter your password")
             return
         }
- 
-        let imageName = UUID().uuidString
-        saveImageToDocumentDirectory(imageName: imageName)
-        let users = UserModel(firstName: firstName, lastName: lastName, phoneNumber: phoneNumber, password: password, imageName: imageName)
-
-        databaseManager.addUser(users)
-        showAlert()
-
+        
+        var imageName = ""
+        if let existingUser{
+            //Update
+            imageName = existingUser.imageName ?? ""
+        }else{
+            //Add
+            imageName = UUID().uuidString
+        }
+        
+        var newUser = UserModel(firstName: firstName, lastName: lastName, phoneNumber: phoneNumber, password: password, imageName: imageName)
+        
+        //user thakle update hobe na thakle add
+        if let existingUser{
+            //Update
+            databaseManager.updateUser(user: newUser, userEntity: existingUser)
+            saveImageToDocumentDirectory(imageName: imageName)
+            showAlert(message: "User Updated")
+        }else{
+           //Add
+            saveImageToDocumentDirectory(imageName: imageName)
+            databaseManager.addUser(newUser)
+            showAlert(message: "User Added")
+        }
+   
         firstNameField.text = ""
         lastNameField.text = ""
         phoneNumberField.text = ""
@@ -124,6 +143,32 @@ extension RegisterViewController{
             }catch{
                 print("Saving image to Document Ditrctory error: \(error)")
             }
+        }
+    }
+}
+
+// MARK: - Update user
+
+extension RegisterViewController{
+    func userDetailConfiguration(){
+        
+        if let existingUser {
+            navigationItem.title = "Update user"
+            firstNameField.text = existingUser.firstName
+            lastNameField.text = existingUser.lastName
+            phoneNumberField.text = existingUser.phoneNumber
+            passwordField.text = existingUser.password
+            
+            let imageURL = URL.documentsDirectory.appending(components: existingUser.imageName ?? "").appendingPathExtension("png")
+            profileImageView.image = UIImage(contentsOfFile: imageURL.path)
+            
+            registerButton.setTitle("Update", for: .normal)
+            
+            imageSelectedByUser = true
+            
+        }else{
+            navigationItem.title = "Add user"
+            registerButton.setTitle("Register", for: .normal)
         }
     }
 }

@@ -29,10 +29,13 @@ class ViewController: UIViewController {
 
 
     @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
-        
+        addUpdateUserNavigation()
+    }
+    
+    func addUpdateUserNavigation (user: UserEntity? = nil){
         let registerViewController = self.storyboard?.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
-                
-                self.navigationController?.pushViewController(registerViewController, animated: true)
+        registerViewController.existingUser = user
+        self.navigationController?.pushViewController(registerViewController, animated: true)
     }
 
 }
@@ -53,7 +56,17 @@ extension ViewController: UITableViewDataSource{
 }
 
 extension ViewController: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
     
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let update = UIContextualAction(style: .normal, title: "Update") { _, _, _ in
+            self.addUpdateUserNavigation(user: self.users[indexPath.row] )// je user select hobe tar indexpath.row te je data asbe ta pass korbo ta registervc pabe
+        }
+        update.backgroundColor = .systemIndigo
+        return UISwipeActionsConfiguration(actions: [update])
+    }
 }
 
 

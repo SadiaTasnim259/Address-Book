@@ -18,12 +18,12 @@ class DatabaseManager{
     
     func addUser(_ user:UserModel ){
         
-        let userEntity = UserEntity(context: context)
-        userEntity.firstName = user.firstName
-        userEntity.lastName = user.lastName
-        userEntity.phoneNumber = user.phoneNumber
-        userEntity.password = user.password
-        userEntity.imageName = user.imageName
+        let userEntity = UserEntity(context: context) // User create
+        userEntity.firstName    = user.firstName
+        userEntity.lastName     = user.lastName
+        userEntity.phoneNumber  = user.phoneNumber
+        userEntity.password     = user.password
+        userEntity.imageName    = user.imageName
         
         do{
             try context.save()
@@ -43,9 +43,6 @@ class DatabaseManager{
          return users
     }
     
-    
-    
-    
     func fetchSearchedUser(keyword: String) -> [UserEntity] {
         var users: [UserEntity] = []
         
@@ -63,5 +60,17 @@ class DatabaseManager{
         return users
     }
 
-      
+    func updateUser(user: UserModel, userEntity: UserEntity){
+        userEntity.firstName    = user.firstName
+        userEntity.lastName     = user.lastName
+        userEntity.phoneNumber  = user.phoneNumber
+        userEntity.password     = user.password
+        userEntity.imageName    = user.imageName
+        
+        do{
+            try context.save()
+        }catch{
+            print("User saving error:", error)
+        }
+    }
 }
