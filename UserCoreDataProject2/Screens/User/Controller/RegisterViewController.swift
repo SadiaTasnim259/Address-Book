@@ -113,7 +113,7 @@ extension RegisterViewController{
             imageName = UUID().uuidString
         }
         
-        var newUser = UserModel(firstName: firstName, lastName: lastName, phoneNumber: phoneNumber, password: password, imageName: imageName)
+        let newUser = UserModel(firstName: firstName, lastName: lastName, phoneNumber: phoneNumber, password: password, imageName: imageName)
         
         //user thakle update hobe na thakle add
         if let existingUser{

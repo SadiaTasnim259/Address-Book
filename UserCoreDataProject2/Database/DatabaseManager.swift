@@ -36,7 +36,7 @@ class DatabaseManager{
         var users: [UserEntity] = []
         
         do{
-            users = try context.fetch(UserEntity.fetchRequest())
+            users = try context.fetch(UserEntity.fetchRequest())// user entity r array dibe fetch korle
         }catch{
             print("Fetch user error", error)
         }

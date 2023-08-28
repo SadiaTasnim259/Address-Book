@@ -59,7 +59,7 @@
                 <outlet property="phoneNumberLabel" destination="CJ4-vj-rLe" id="z4W-ss-feA"/>
                 <outlet property="profileImageView" destination="WD3-C8-hHE" id="vTz-xN-Ezg"/>
             </connections>
-            <point key="canvasLocation" x="5" y="-11"/>
+            <point key="canvasLocation" x="4.5801526717557248" y="-11.267605633802818"/>
         </tableViewCell>
     </objects>
 </document>

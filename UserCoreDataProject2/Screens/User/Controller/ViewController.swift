@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     var databaseManager = DatabaseManager()
-    private var users: [UserEntity] = []
+     private var users: [UserEntity] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()

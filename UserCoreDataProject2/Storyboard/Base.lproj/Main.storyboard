@@ -70,39 +70,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="jJY-mH-0gB">
-                                <rect key="frame" x="32" y="371" width="330" height="263"/>
+                                <rect key="frame" x="32" y="371" width="329" height="263"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please Enter Your First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SdP-27-cOt">
-                                        <rect key="frame" x="0.0" y="0.0" width="330" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="329" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="dOr-6e-yoK"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="330" id="jU7-kj-o0d"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please Enter Your Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Nq-fE-ecQ">
-                                        <rect key="frame" x="0.0" y="71" width="330" height="50"/>
+                                        <rect key="frame" x="0.0" y="71" width="329" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="O1P-ji-dBY"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="330" id="P9F-zR-VHW"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="330" id="P9F-zR-VHW"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please Enter Your Phone Number " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lqh-VG-b1k">
-                                        <rect key="frame" x="0.0" y="142" width="330" height="50"/>
+                                        <rect key="frame" x="0.0" y="142" width="329" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="330" id="K2A-mR-f4J"/>
                                             <constraint firstAttribute="height" constant="50" id="op2-a3-wuS"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please Enter Your Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YUI-Zr-Hef">
-                                        <rect key="frame" x="0.0" y="213" width="330" height="50"/>
+                                        <rect key="frame" x="0.0" y="213" width="329" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="330" id="qHM-gY-F63"/>
                                             <constraint firstAttribute="height" constant="50" id="wWS-Ae-d3Z"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -111,7 +108,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xwy-rD-3fc">
-                                <rect key="frame" x="139.66666666666666" y="694" width="115" height="44"/>
+                                <rect key="frame" x="139" y="694" width="115" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="115" id="Y9G-hq-q2S"/>
                                 </constraints>
@@ -130,7 +127,7 @@
                                 </connections>
                             </button>
                             <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="H5w-Il-DCS">
-                                <rect key="frame" x="137" y="154" width="120" height="118.66666666666667"/>
+                                <rect key="frame" x="136.66666666666666" y="154" width="119.99999999999997" height="118.66666666666667"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="6Sy-qO-BwK"/>
