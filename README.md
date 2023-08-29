@@ -1,2 +1,3 @@
 # UserCoreDataProject2
-CoreData project
+![App Preview](UserCoreDataProject2.gif)
+
