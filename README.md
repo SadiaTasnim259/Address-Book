@@ -1,4 +1,5 @@
 # UserCoreDataProject2
 
-<img src="UserCoreDataProject2.gif" height="50%"/>
-
+<p align="center">
+<img src="UserCoreDataProject2.gif" height="450"/>
+</p>
