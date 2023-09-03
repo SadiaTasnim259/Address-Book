@@ -6,6 +6,10 @@
 - We can also delete and update the details.
 - There is also a search tab for searching for contacts.
   
-<p align="center">
-<img src="UserCoreDataProject2.gif" height="450"/>
-</p>
+<!---   <p align="center"><img src="UserCoreDataProject2.gif" height="450"/></p>   -->
+
+## Screenshots and App Walkthrough
+
+| App Walkthrough |
+| --- |
+| <p align="center"><img src="UserCoreDataProject2.gif" height="450"/></p> |
