@@ -10,7 +10,10 @@
 
 ## Screenshots and App Walkthrough
 
-| App Walkthrough | Home Screen | Createing User Screen |
+| App Walkthrough | Home Screen | Creating User Screen |
 | --- | --- | --- |
 | <p align="center"><img src="UserCoreDataProject2.gif" height="450"/></p> | <p align="center"><img src="All User.png" height="450"/></p> | <p align="center"><img src="Create User.png" height="450"/></p> |
 
+| Search Screen | Update Screen |
+| --- | --- |
+| <p align="center"><img src="Searched User.png" height="450"/></p> | <p align="center"><img src="Update User.png" height="450"/></p> |
