@@ -12,8 +12,8 @@
 
 | App Walkthrough | Home Screen | Creating User Screen |
 | --- | --- | --- |
-| <p align="center"><img src="UserCoreDataProject2.gif" height="450"/></p> | <p align="center"><img src="All User.png" height="450"/></p> | <p align="center"><img src="Create User.png" height="450"/></p> |
+| <p align="center"><img src="Screenshots and App Walkthrough/UserCoreDataProject2.gif" height="450"/></p> | <p align="center"><img src="Screenshots and App Walkthrough/All User.png" height="450"/></p> | <p align="center"><img src="Screenshots and App Walkthrough/Create User.png" height="450"/></p> |
 
 | Search Screen | Update Screen |
 | --- | --- |
-| <p align="center"><img src="Searched User.png" height="450"/></p> | <p align="center"><img src="Update User.png" height="450"/></p> |
+| <p align="center"><img src="Screenshots and App Walkthrough/Searched User.png" height="450"/></p> | <p align="center"><img src="Screenshots and App Walkthrough/Update User.png" height="450"/></p> |
